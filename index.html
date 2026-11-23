@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trillion Casino Prototype</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Integrating Google Fonts for a premium feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>👑 TRILION GAMING HOUSE 🎰</h1>
+        <p>Where fortune awaits. (Powered by Controlled RNG)</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Balance/User Info Section (Where you plug in your payment details) -->
+        <div class="sidebar">
+            <h2>💰 Wallet Status</h2>
+            <div id="user-info">
+                <p><strong>Username:</strong> Player_001</p>
+                <p><strong>Current Balance:</strong> $<span id="current-balance">1000.00</span></p>
+                <p class="note"><em>(Replace this with your real bank/payment integration hook)</em></p>
+            </div>
+
+            <div class="deposit-panel">
+                <h3>Add Funds (Bank Top-Up)</h3>
+                <!-- Placeholder for external payment integration -->
+                <input type="text" id="deposit-amount" placeholder="Amount to Deposit">
+                <button id="btn-deposit">Top Up</button>
+            </div>
+        </div>
+
+        <!-- Game Area -->
+        <main class="game-area">
+            <section id="game-view">
+                <h2>Roulette Roulette</h2>
+
+                <!-- Visuals Container -->
+                <div id="roulette-wheel-container">
+                    <!-- The wheel visualization will be dynamically drawn or simulated here -->
+                    <div id="wheel-display">ROLL ME!</div>
+                </div>
+
+                <div id="status-message" class="message">Place your bets to start!</div>
+
+                <!-- Betting Interface -->
+                <div class="betting-interface">
+                    <div class="bet-options">
+                        <button class="bet-btn" data-bet="red">Red (1:1)</button>
+                        <button class="bet-btn" data-bet="black">Black (1:1)</button>
+                        <button class="bet-btn" data-bet="green">Green/Zero (House Edge)</button>
+                    </div>
+
+                    <div class="betting-controls">
+                        <label for="bet-amount">Bet Amount ($):</label>
+                        <input type="number" id="bet-amount" value="10" min="1">
+                        <button id="btn-place-bet">Place Bet & Spin</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
