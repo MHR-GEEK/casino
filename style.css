@@ -1,0 +1,198 @@
+/* General Reset and Body Styling */
+body {
+    font-family: 'Cinzel', serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f0e1a 100%);
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    color: gold;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #ccc;
+    font-style: italic;
+}
+
+/* Main Layout */
+.container {
+    display: flex;
+    max-width: 1400px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Sidebar (User Info & Deposits) */
+.sidebar {
+    flex: 1;
+    background-color: #2c0e45; /* Deep Purple */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    height: fit-content;
+}
+
+.sidebar h2 {
+    color: gold;
+    border-bottom: 2px solid gold;
+    padding-bottom: 10px;
+}
+
+#user-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+.deposit-panel {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #5c0099;
+}
+.deposit-panel input, .deposit-panel button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: none;
+}
+#btn-deposit {
+    background-color: #ffcc00;
+    color: #1a1a2e;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+#btn-deposit:hover {
+    background-color: #e6b800;
+}
+
+/* Game Area */
+.game-area {
+    flex: 3;
+    background-color: #3a1e5c; /* Casino Blue/Purple */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+#game-view h2 {
+    text-align: center;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+/* Roulette Wheel Visualization (Simplified) */
+#roulette-wheel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px; /* Fixed height for visual impact */
+    margin-bottom: 30px;
+}
+
+#wheel-display {
+    font-size: 3em;
+    font-weight: 900;
+    color: white;
+    padding: 20px 40px;
+    border: 10px solid gold;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+    transition: transform 3s ease-out; /* Animation hook */
+    text-transform: uppercase;
+}
+
+/* Betting Interface */
+.betting-interface {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #4a2c7d;
+    border-radius: 8px;
+    background-color: #1e0a33;
+}
+
+.bet-options button {
+    padding: 12px 20px;
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 2px solid #a0a0a0;
+    background-color: #4a2c7d;
+    color: white;
+    transition: all 0.2s;
+}
+.bet-options button.active {
+    background-color: #ffcc00;
+    color: #1a1a2e;
+    box-shadow: 0 0 10px gold;
+    border-color: gold;
+}
+
+.betting-controls {
+    margin-top: 20px;
+}
+#bet-amount {
+    padding: 10px;
+    width: 100px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid gold;
+    background: #000;
+    color: white;
+}
+#btn-place-bet {
+    padding: 10px 25px;
+    background-color: #e74c3c; /* Red for Action */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+#btn-place-bet:hover:not(:disabled) {
+    background-color: #c0392b;
+}
+#btn-place-bet:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Status Messages */
+.message {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.message.win {
+    background-color: rgba(50, 205, 50, 0.2);
+    color: #32CD32;
+    border: 1px solid #32CD32;
+}
+.message.lose {
+    background-color: rgba(255, 99, 71, 0.2);
+    color: #FF6347;
+    border: 1px solid #FF6347;
+}
+.message.info {
+    background-color: rgba(0, 191, 255, 0.2);
+    color: #00BFFF;
+    border: 1px solid #00BFFF;
+}
